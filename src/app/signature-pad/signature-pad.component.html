@@ -1,0 +1,61 @@
+<div class="bac">
+
+
+<div class="form-container">
+  
+  <h3>Signature</h3>
+<canvas
+  #canvas
+  (touchstart)="startDrawing($event)"
+  (touchmove)="moved($event)"
+ 
+></canvas>
+<p class="error-message" *ngIf="signatureNeeded">Signature is required</p>
+
+<div class="buttons flex justify-between">
+  <button (click)="clearPad()">Clear</button>
+  <button (click)="savePad()">Submit the signature</button>
+  <button (click)="undo()">Undo Signature</button>
+  <button (click)="redo()">Redo Signature</button>
+</div>
+
+<div *ngIf="signatureNeeded === false">    
+    <img src="{{ signatureImg }}" alt="" srcset="" />
+</div>
+<h3>Date</h3>
+<div class="Date">
+  <input type="date" [(ngModel)]="selectedDate">
+  <button (click)="saveDate()">Save it</button>
+  <button (click)="Undo()">Undo</button>
+  <button (click)="Redo()">Redo</button>
+</div>
+<div *ngIf="savedDates.length>0">
+  <!-- <h4>Saved Dates:</h4> -->
+  <ul>
+    <li *ngFor="let date of savedDates">{{ date }}</li>
+  </ul>
+</div>
+<h3>Enter Your Text</h3>
+<div class="Text">
+  <input type="text" [(ngModel)]="texti">
+  <button (click)="saveText()">Save it</button>
+  <button (click)="UndoText()">Undo</button>
+  <button (click)="RedoText()">Redo</button>
+</div>
+<div *ngIf="savedtext.length>0">
+  <p>{{ savedtext[savedtext.length - 1] }}</p>
+</div>
+
+<h3>Enter your whole text</h3>
+<div class="TextArea">
+  <textarea cols="30" rows="10" [(ngModel)]="textArea"></textarea>
+  
+  <button (click)="saveTextArea()">Save it</button>
+  <button (click)="UndoTextArea()">Undo</button>
+  <button (click)="RedoTextArea()">Redo</button>
+</div>
+<div *ngIf="savedtextarea.length>0">
+  <p>{{ savedtextarea[savedtextarea.length - 1] }}</p>
+</div>
+</div>
+</div>

@@ -1,0 +1,69 @@
+canvas {
+    display: block;
+    border: 1px solid rgb(187, 178, 178);
+    background-color: var(--ion-color-success);
+    width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+button {
+    margin: 10px;
+    margin-left: 10px;
+}
+.bac{
+    background-color: beige
+}
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 5px solid black;
+    background-color: rgb(174, 235, 143);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h4 {
+    margin-bottom: 10px;
+  }
+  
+  canvas {
+    border: 3px solid rgb(82, 76, 76);
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  .buttons {
+    margin-top: 10px;
+  }
+  
+  .Date,
+  .Text,
+  .TextArea {
+    margin-top: 20px;
+  }
+  
+  input[type="date"],
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 3px solid rgb(82, 76, 76);
+    border-radius: 3px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    margin-top: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  
